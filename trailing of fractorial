@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int i,n,fact=1,rem,count=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        
+        fact=fact*i;
+    
+
+    }
+     printf("%d\n",fact);
+    while(fact>0)
+    {
+        
+        rem=fact%10;
+        if(rem==0)
+        count++;
+        fact=fact/10;
+    }
+    printf("%d",count);
+    return 0;
+}
