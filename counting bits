@@ -1,0 +1,24 @@
+338 leetcode
+  class Solution:
+   def countBits(self, n: int) -> List[int]:
+        result=[]
+        for i in range(n+1):
+            result.append(bin(i).count('1'))
+        return result
+
+    *********
+
+Input: n = 2
+Output: [0,1,1]
+
+    0--> 0000 = 0
+    1--> 0001 = 1
+    2--> 0010 = 1
+    
+    Iterate from 0 to n: Loop through each number from 0 to n.
+Convert to Binary: Use the bin() function to get the binary representation of the number. For example, bin(2) returns '0b10'.
+Count 1s: Use the count('1') method to count the number of 1s in the binary string.
+Store the Result: Append the count to the result list.
+Return the Result: After the loop, return the result list containing the counts of 1s for each number from 0 to n
+
+**********
