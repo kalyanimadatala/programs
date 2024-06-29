@@ -1,0 +1,25 @@
+70 leetcode
+class Solution:
+    def __init__(self):
+        self.memo={}
+    def climbStairs(self, n: int) -> int:
+        if n==0 or n==1:
+            return 1 
+        if n in self.memo:
+            return self.memo[n]
+        self.memo[n]=self.climbStairs(n-1)+self.climbStairs(n-2)
+        return self.memo[n]
+
+
+*****
+
+Initialize a dictionary memo to store previously computed results.
+Base Case:
+If n == 0 or n == 1, return 1 (only one way to stay at the ground or climb one step).
+Memoization Check:
+Before computing the number of ways to climb n steps, check if it's already in the memo. If so, return the stored result.
+Recursive Case:
+Compute the number of ways to climb n steps as the sum of the ways to climb n-1 steps and n-2 steps.
+Store the result in the memo dictionary before returning it.
+
+*****
